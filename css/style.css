@@ -1,0 +1,174 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+  background: #f7edff;
+}
+.buttons{
+  margin: 50px;
+}
+.buttons button{
+  background:#333;
+  color: #fff;
+  margin: 5px;
+  border: 0;
+  outline: 0;
+  width: 120px;
+  height: 50px;
+  border-radius: 10px;
+  padding: 4px;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+.buttons button:hover{
+  color: white;
+  background-color: red;
+  box-shadow: 10px 10px 10px solid gray;
+}
+#toastBox{
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  align-items: flex-end;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 20px;
+}
+.toast{
+  height: 80px;
+  width: 400px;
+  background: #fff;
+  font-weight: 500;
+  margin: 15px 0px;
+  box-shadow:0 0 20px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  position: relative;
+}
+.toast i{
+  margin: 0px 20px;
+  color: green;
+  font-size: 35px;
+}
+.error i{
+  margin: 0px 20px;
+  color: red;
+  font-size: 35px;
+  border-radius: 25%;
+}
+.invalid i{
+  margin: 0px 20px;
+  color: orange;
+  font-size: 35px;
+  border-radius: 25%;
+}
+.toast::after{
+  content:'';
+  width: 100%;
+  height: 5px;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  background: green;
+  animation:anim 6s linear forwards;
+}
+@keyframes anim {
+  100%{
+    width: 0;
+  }
+}
+.error::after{
+  background:red;
+}
+.invalid::after{
+  background:orange;
+}
+/* ! mobile edition */
+@media(max-width:390px){
+  .buttons{
+    margin: 30px;
+    display: flex;
+
+  }
+  .buttons button{
+    background:#333;
+    color: #fff;
+    margin: 5px;
+    border: 0;
+    outline: 0;
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+    padding: 4px;
+    cursor: pointer;
+    transition: all 1s ease;
+  }
+  .buttons button:hover{
+    color: white;
+    background-color: red;
+    box-shadow: 10px 10px 10px solid gray;
+  }
+  #toastBox{
+    position: relative;
+    bottom: 0px;
+    right: 0px;
+    align-items: flex-end;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 10px;
+  }
+  .toast{
+    height: 70px;
+    width: 340px;
+    background: #fff;
+    font-weight: 500;
+    margin: 5px 0px;
+    box-shadow:0 0 10px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    position: relative;
+  }
+  .toast i{
+    margin: 0px 20px;
+    color: green;
+    font-size: 25px;
+  }
+  .error i{
+    margin: 0px 20px;
+    color: red;
+    font-size: 25px;
+    border-radius: 25%;
+  }
+  .invalid i{
+    margin: 0px 20px;
+    color: orange;
+    font-size: 25px;
+    border-radius: 25%;
+  }
+  .toast::after{
+    content:'';
+    width: 100%;
+    height: 5px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background: green;
+    animation:anim 6s linear forwards;
+  }
+  @keyframes anim {
+    100%{
+      width: 0;
+    }
+  }
+  .error::after{
+    background:red;
+  }
+  .invalid::after{
+    background:orange;
+  }
+}
